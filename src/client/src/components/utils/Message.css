@@ -1,0 +1,17 @@
+div.message {
+	height: 70px;
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 9px 4px;
+	text-align: center;
+}
+
+div.message.success {
+	background: #45de69;
+	border: 2px solid #1fa63f;
+}
+
+div.message.error {
+	background: #f07380;
+	border: 2px solid #f21d33;
+}

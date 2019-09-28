@@ -1,0 +1,5 @@
+.time-separator {
+	width: 5%; 
+	vertical-align: middle; 
+	line-height: calc(1.5em + .75rem + 2px);
+}

@@ -1,0 +1,38 @@
+div.nav-container{
+	padding: 0 5%;
+}
+
+.nav-btn {
+	display: inline-block;
+	vertical-align: middle;
+	width: 50%;
+	height: 110px;
+	text-align: center;
+	background: #E5E5E5;
+	font-size: 2rem;
+	color: #777;
+}
+
+.nav-btn.active {
+	background: #007bff;
+	color: #ffffff;
+} 
+
+.Centered {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.Centerer {
+    display: inline-block;
+    height: 100%;
+	vertical-align: middle;
+}
+
+@media (max-width: 576px) {
+	.nav-btn {
+		margin-top: 50px;
+		height: 60px;
+		font-size: 1rem;
+	}
+}

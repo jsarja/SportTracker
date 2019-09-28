@@ -1,0 +1,48 @@
+div.sport-btn {
+	display: inline-block;
+	vertical-align: middle;
+	width: 22%;
+	height: 45px;
+	text-align: center;
+	border: solid 2px #cccccc;
+	font-size: 1.5rem;
+	color: #cccccc;
+	margin-right: 4%;
+	cursor: pointer;
+}
+
+div.sport-btn:last-child {
+	margin-right: 0;
+}
+
+div.sport-btn.active {
+	background-color: #007bff;
+	border-color: #007bff;
+	color: #ffffff;
+}
+
+div.sport-selection {
+	display: inline-block;
+	margin-top: 1rem;
+	width: 80%;
+}
+
+div.sport-btn:hover {
+    color: #fff;
+    background-color: #007bff;
+	border-color: #007bff;
+}
+
+@media (max-width: 880px) {
+	div.sport-btn {
+		width: 46%;
+		margin-right: 2%;
+		margin-bottom: 10px;
+		font-size: 1rem;
+	}
+
+	div.sport-btn:nth-child(2n) {
+		margin-right: 0;
+	}
+
+}

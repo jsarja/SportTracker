@@ -1,0 +1,14 @@
+#summary-tab .col {
+    min-height: 50px;
+    text-align: center;
+    margin-right: 2%;
+    padding: 1px;
+}
+
+#summary-tab .row .col:last-child {
+    margin-right: 0px;
+}
+
+#summary-tab p {
+    margin-bottom: 1px;
+}
