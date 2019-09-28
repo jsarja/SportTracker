@@ -1,0 +1,15 @@
+# Own Files
+/design
+node_modules/
+config/
+
+
+# Python
+.Python
+build/
+.env
+env/
+ENV/
+*.pyc
+*.db
+
