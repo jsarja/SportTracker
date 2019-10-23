@@ -19,7 +19,6 @@ class GoogleMapsRoute extends React.Component {
 		  bounds.extend(coord);
 		});
 		this._map.map.fitBounds(bounds);
-		console.log(this._map);
 	}
     
 	render() {

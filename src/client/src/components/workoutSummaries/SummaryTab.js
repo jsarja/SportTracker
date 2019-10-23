@@ -87,7 +87,6 @@ class SummaryTab extends React.Component {
     // Display chart modal when user clicks a statitic row.
     renderChart() {
         if(this.state.showChart) {
-            console.log("HERE")
             return (
                 <ChartModal 
                     onClose={() => this.setState({showChart: false})}
@@ -122,7 +121,6 @@ class SummaryTab extends React.Component {
 }
 
 const mapStateToProps = state => {
-    console.log()
     return {summaryData: state.summaryData, chartData: state.summaryCharts};
 }
 export default connect(mapStateToProps, { getSummaryData, 

@@ -43,7 +43,6 @@ export const getWorkouts = async (googleId, order, filterOptions) => {
 }
 
 export const postWorkout = async (googleId, payload) => {
-    console.log(JSON.stringify(payload));
     const resp = await fetch(`${baseURL}/workouts`, {
         method: 'POST',
         body: JSON.stringify(payload),

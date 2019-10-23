@@ -61,15 +61,11 @@ export const datesForStringify = (formValues) => {
 	const et = formValues.endTime;
 	if (st){
 		const hDif = st.getHours() - st.getTimezoneOffset() / 60;
-    	const mDif = (st.getHours() - st.getTimezoneOffset()) % 60;
     	formValues.startTime.setHours(hDif);
-    	formValues.startTime.setMinutes(mDif);
 	}
 	if (et){
 		const hDif = et.getHours() - et.getTimezoneOffset() / 60;
-    	const mDif = (et.getHours() - et.getTimezoneOffset()) % 60;
     	formValues.endTime.setHours(hDif);
-    	formValues.endTime.setMinutes(mDif);
 	}
 	
 };
