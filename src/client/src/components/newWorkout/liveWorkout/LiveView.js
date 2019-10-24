@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import NoSleep from 'nosleep.js';
 
 import LiveInfo from './LiveInfoBox';
 import GoogleMapsTracking from '../../googleMaps/GoogleMapsTracking';
@@ -38,6 +39,14 @@ class LiveView extends React.Component {
 				return false;
 			}
 		});
+
+		// Keep mobile screen active for the whole workout
+		this.noSleep = new NoSleep();
+		const enableNoSleep = () => {
+			this.noSleep.enable();
+			document.removeEventListener('touchstart', enableNoSleep, false);
+		}
+		document.addEventListener('touchstart', enableNoSleep, false);
 	}
 
 	componentWillUnmount() {
@@ -49,6 +58,9 @@ class LiveView extends React.Component {
 
 		// Show footer again.
 		document.querySelector('footer').style.display = "block";
+
+		// No longer need to force the screen to stay active.
+		this.noSleep.disable();
 	}
 	
 	render() {
