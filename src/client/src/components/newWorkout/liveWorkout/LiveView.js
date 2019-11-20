@@ -42,11 +42,7 @@ class LiveView extends React.Component {
 
 		// Keep mobile screen active for the whole workout
 		this.noSleep = new NoSleep();
-		const enableNoSleep = () => {
-			this.noSleep.enable();
-			document.removeEventListener('touchstart', enableNoSleep, false);
-		}
-		document.addEventListener('touchstart', enableNoSleep, false);
+		this.noSleep.enable();
 	}
 
 	componentWillUnmount() {
