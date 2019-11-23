@@ -16,6 +16,7 @@ const mapStyles = {
 
 class GoogleMapsTracking extends React.Component {
 	state = {userLocation: {lat:61, lng:25}, permissionDenied: false}
+	lastUpdate = new Date();
 
 	componentDidMount() {
 		// Get user initial position to center the map and draw user marker.
@@ -47,8 +48,11 @@ class GoogleMapsTracking extends React.Component {
 				)/1000;
 
 				// Only update the coordinates when user has moved over 5 meters
-				// from last location
-				if(distance > 0.005){
+				// from last location.
+				const timeFromLastUpdate = (new Date() - this.lastUpdate.getTime())/1000;
+				// Prevent for small inaccuracy jumps when person is not moving
+				// and the possibility that the location jumps to a cell tower.
+				if(distance > 0.005 && (distance < 0.2 || timeFromLastUpdate > 30)){
 					// Append new coordinates to redux state's array and update 
 					// total distance.
 					this.props.updateLocation({lat: latitude, lng: longitude}, distance);
@@ -56,6 +60,7 @@ class GoogleMapsTracking extends React.Component {
 						userLocation: {lat: latitude, lng: longitude},
 						permissionDenied: false
 					});
+					this.lastUpdate = new Date();
 				}
 			}
 		}, error => this.setState({permissionDenied: true}));

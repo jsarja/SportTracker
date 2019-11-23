@@ -18,13 +18,13 @@ class LiveView extends React.Component {
 	}
 
 	componentDidMount() {
-		// Hide side bar.
+		// Hide the side bar.
 		if(document.querySelector('#sidebar')) {
 			document.querySelector('#sidebar').style.display = "none";
 			document.querySelector('#sidebarOpen').style.display = "none";
 		}
 
-		// Hide footer.
+		// Hide the footer.
 		if(document.querySelector('footer')) {
 			document.querySelector('footer').style.display = "none";
 		}
