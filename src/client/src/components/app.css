@@ -43,3 +43,9 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none; 
   margin: 0; 
 }
+
+@media (max-width: 400px) {
+	.workout-info-row {
+		font-size: 0.85rem;
+	}
+}

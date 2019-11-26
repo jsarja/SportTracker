@@ -18,9 +18,9 @@ const WorkoutPreview = (props) => {
 	const values = [[date, duration], [distance, sport]];
 	
 	return (
-		<div className="w-75 mx-auto mb-2 border border-dark lead">
+		<div className="w-75 mx-auto mb-3 border border-dark lead">
 			{renderInfoRows(headers, values)}
-			<div className="row pt-3">
+			<div className="row pt-3 border border-dark mx-0">
 				<div className="col-sm-4 offset-sm-2 text-center pb-2">
 					<Link to={`/sportTracker/workouts/${props.workout.workoutId}`} className="btn btn-info">View Workout</Link>
 				</div>
