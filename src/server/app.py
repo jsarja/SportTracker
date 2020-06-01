@@ -23,7 +23,6 @@ def login():
 @app.route('/workouts', methods=['GET', 'POST'])
 def workouts():
 	googleId = request.headers.get('Authorization')
-	print(googleId)
 	if request.method == 'POST':
 		return create_workout(googleId)
 
