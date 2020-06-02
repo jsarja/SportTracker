@@ -2,7 +2,7 @@
 
 SportTracker is a web application for tracking workouts. With SportTracker you can save workouts, browse saved workouts, see summaries about your workouts and track your weight progress. The backend is implemented using Python3, Flask and SQLite database. Front-end uses React framework. Authentication is handled with google sign-in (OAuth2). SportTracker uses Google Maps API and browser's geolocation for user position tracking. Charts are implemented using Recharts module.
 
-Live application: https://jsarja.fi/sportTracker/
+Live application: https://sarja-sport-tracker.herokuapp.com/
 
 If you don't want to register to SportTracker with your Google account, you can also explore the application with the test user account.
 
