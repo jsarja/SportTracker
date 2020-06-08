@@ -6,7 +6,7 @@ from views.workout_summaries import get_summary, get_chart_data
 from views.weight import save_weight, get_weights
 from views.workouts import get_workout, get_workouts, delete_workout, create_workout, ORDERS
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='./build', static_url_path='/sportTracker')
 application = app
 CORS(app)
 
@@ -53,6 +53,13 @@ def weight():
 		return save_weight(googleId)
 	return get_weights(googleId)
 
+@app.route('/')
+def index():
+	return app.send_static_file('index.html')
+
+@app.errorhandler(404)
+def fallback(e):
+	return app.send_static_file('index.html')
 
 if __name__ == '__main__':
-	app.run()
+	app.run(port=3000, debug=True)

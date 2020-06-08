@@ -13,6 +13,9 @@ export const getSummaryData = (timePeriod = 'all', sport) => async (dispatch, ge
 			const {hours, minutes, seconds} =
 				secondsToTimeFormat(data[dataPoint].duration);
 			data[dataPoint].duration = `${hours}:${minutes}:${seconds}`;
+			if(!data[dataPoint].speed) {
+				data[dataPoint].speed = 0;
+			}
 			data[dataPoint].speed = data[dataPoint].speed.toFixed(2);
 		}
 		dispatch({ type: GET_SUMMARY_DATA, payload: data });
@@ -46,6 +49,9 @@ export const getSummaryChart = (timePeriod = 'all', sport) => async (dispatch, g
 
 		if(data.speed) {
 			data.speed.forEach(speed => {
+				if(!speed.speed) {
+					speed.speed = 0;
+				}
 				speed.speed = speed.speed.toFixed(2);
 			});
 		}

@@ -1,5 +1,5 @@
 
-const baseURL = 'https://jsarja.fi/api/sportTracker';
+const baseURL = 'https://sarja-sport-tracker.herokuapp.com/';
 
 export const getLoginInformation = async (googleId) => {
     const resp = await fetch(`${baseURL}/login`, {headers: {Authorization: googleId}});

@@ -57,8 +57,8 @@ class App extends React.Component {
 
 								<Route path="/sportTracker/weight" exact component={Weight}/>
 
-								<Route path="/sportTracker"component={RedirectToMain}/>
-								<Route path="/sportTracker/*"component={RedirectToMain}/>
+								<Route path="/"component={RedirectToMain}/>
+								<Route path="/*"component={RedirectToMain}/>
 							</Switch>
 							</div>
 						</div>
