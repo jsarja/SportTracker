@@ -36,7 +36,8 @@ const headerConverter = {
     'calories': 'Calories',
     'heartRate': 'Average Heart Rate',
     'startTime': 'Start Time',
-    'endTime': 'End Time'
+    'endTime': 'End Time',
+    'speed': 'Speed'
 }
 
 const Chart = ({ data, variableName }) => {
