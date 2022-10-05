@@ -21,13 +21,16 @@
     "recharts": "^1.7.1",
     "redux": "^4.0.1",
     "redux-form": "^8.2.3",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "@snyk/protect": "latest"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -47,5 +50,6 @@
   "engines": {
     "node": "12.4.0"
   },
-  "homepage": "https://jsarja.fi/sportTracker"
+  "homepage": "https://jsarja.fi/sportTracker",
+  "snyk": true
 }
